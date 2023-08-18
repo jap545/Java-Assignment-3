@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Assignment-3</string>
+    <string name="splash_title">Welcome to our Dealership</string>
+
+    <string name="main_activity_title">Dealership Vehicles Listing</string>
+    <string name="main_activity_create_button">Create</string>
+    <string name="main_activity_reload_button">Reload</string>
+    <string name="main_activity_clear_button">Clear</string>
+
+    <string name="vehicle_form_title">Vehicle Form</string>
+    <string name="vehicle_form_choose_photo_button">Choose Photo</string>
+    <string name="vehicle_form_take_photo_button">Take Photo</string>
+    <string name="vehicle_form_submit_button">Submit</string>
+    <string name="vehicle_form_edit_button">Edit</string>
+    <string name="vehicle_form_delete_button">Delete</string>
+
+    <string name="main_menu_vehicle_menu">Vehicle List</string>
+    <string name="main_menu_vehicle_form_menu">Vehicle Form</string>
+    <string name="main_menu_company_menu">Company List</string>
+    <string name="main_menu_company_form_menu">Company Form</string>
+
+    <string name="company_main_activity_title">Company List</string>
+    <string name="company_main_activity_create_button">Create</string>
+    <string name="company_main_activity_reload_button">Reload</string>
+    <string name="company_main_activity_clear_button">Clear</string>
+
+    <string name="company_form_activity_title">Company Form</string>
+    <string name="company_form_activity_choose_photo_button">Choose Photo</string>
+    <string name="company_form_activity_take_photo_button">Take Photo</string>
+    <string name="company_form_activity_submit_button">Submit</string>
+    <string name="company_form_activity_edit_button">Edit</string>
+    <string name="company_form_activity_delete_button">Delete</string>
+</resources>
