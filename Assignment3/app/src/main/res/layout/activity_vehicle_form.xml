@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".CreateVehicleActivity">
+
+    <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="18dp"
+            app:layout_constraintTop_toBottomOf="@+id/vehicle_form_take_photo_button" android:layout_marginBottom="23dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/vehicle_form_submit_button"
+            app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Form Fields Container -->
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+            <!-- Make Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_make_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Make" android:minHeight="48dp"/>
+
+            <!-- Model Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_model_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Model" android:minHeight="48dp"/>
+
+            <!-- Condition Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_condition_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Condition" android:minHeight="48dp"/>
+
+            <!-- Engine Cylinders Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_engine_cylinders_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Engine Cylinders"
+                    android:inputType="number" android:minHeight="48dp"/>
+
+            <!-- Year Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_year_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Year"
+                    android:inputType="number" android:minHeight="48dp"/>
+
+            <!-- Number of Doors Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_number_of_doors_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Number of Doors"
+                    android:inputType="number" android:minHeight="48dp"/>
+
+            <!-- Price Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_price_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:inputType="numberDecimal" android:minHeight="48dp"/>
+
+            <!-- Color Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_color_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Color" android:minHeight="48dp"/>
+
+            <!-- Date Sold Field -->
+            <EditText
+                    android:id="@+id/vehicle_form_date_sold_field"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Date Sold"
+                    android:inputType="date"/>
+
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+            android:id="@+id/vehicle_form_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vehicle_form_title"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/vehicle_form_edit_button" android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/vehicle_form_delete_button"/>
+
+    <ImageView
+            android:id="@+id/vehicle_form_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/activity_main"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/vehicle_form_title"
+            app:layout_constraintEnd_toStartOf="@+id/vehicle_form_take_photo_button" android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/scrollView2" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp" android:layout_marginEnd="55dp"
+    />
+
+    <Button
+            android:id="@+id/vehicle_form_choose_photo_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onChoosePhotoClick"
+            android:text="@string/vehicle_form_choose_photo_button"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/vehicle_form_title" android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <Button
+            android:id="@+id/vehicle_form_take_photo_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:onClick="onUploadPhotoClick"
+            android:text="@string/vehicle_form_take_photo_button"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/vehicle_form_choose_photo_button"
+            app:layout_constraintStart_toEndOf="@+id/vehicle_form_image" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="13dp"/>
+
+    <Button
+            android:id="@+id/vehicle_form_delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="@string/vehicle_form_delete_button"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="41dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="#FFFFFFFF"/>
+    <Button
+            android:id="@+id/vehicle_form_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_yellow"
+            android:text="@string/vehicle_form_edit_button"
+            android:textColor="#FFFFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="18dp" app:layout_constraintStart_toEndOf="@+id/vehicle_form_submit_button"
+            android:layout_marginBottom="16dp"/>
+    <Button
+            android:id="@+id/vehicle_form_submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:onClick="onSubmitClick"
+            android:text="@string/vehicle_form_submit_button"
+            android:textColor="#FFFFFFFF"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginStart="54dp"
+            android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

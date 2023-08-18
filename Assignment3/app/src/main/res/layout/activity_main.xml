@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   tools:context=".MainActivity">
+
+    <TextView
+            android:id="@+id/main_activity_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="34dp"
+            android:text="@string/main_activity_title"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_create_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="188dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_message"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_create_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_title"
+            app:srcCompat="@drawable/activity_main" android:contentDescription="TODO"/>
+
+    <Button
+            android:id="@+id/main_activity_create_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="33dp"
+            android:background="@color/light_blue"
+            android:onClick="onCreateClick"
+            android:text="@string/main_activity_create_button"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_message"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView2"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_title" android:textColor="#FFFFFFFF"/>
+
+    <TextView
+            android:id="@+id/main_activity_message"
+            android:layout_width="375dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_create_button"/>
+
+    <ListView
+            android:id="@+id/main_activity_list_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_reload_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_search"/>
+
+    <Button
+            android:id="@+id/main_activity_reload_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="38dp"
+            android:background="@color/light_green"
+            android:text="@string/main_activity_reload_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/main_activity_clear_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_list_view" android:textColor="#FFFFFFFF"/>
+
+    <Button
+            android:id="@+id/main_activity_clear_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="38dp"
+            android:background="@color/light_red"
+            android:text="@string/main_activity_clear_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/main_activity_reload_button" android:textColor="#FFFFFFFF"/>
+
+    <SearchView
+            android:id="@+id/main_activity_search"
+            android:layout_width="371dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintBottom_toTopOf="@+id/main_activity_list_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/main_activity_message"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
